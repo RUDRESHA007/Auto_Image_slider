@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+
+    background-image: linear-gradient(to right, #f1b1b1 , #82e6e8,rgb(108, 188, 108));
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17%;
+
+}
+
+.container .scroller {
+    position: relative;
+    background-color: #0a090900;
+    width: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    /* padding: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.container .scroller .image {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    transition: .1s ease-in;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.container .scroller .image img {
+    right: 1.5rem;
+
+    padding: 2.5rem;
+    transition: .1s ease-in;
+    opacity: .4;
+    width: 20rem;
+    height: 20rem;
+
+
+}
+
+.container .scroller .image img:nth-child(2) {
+    width: 20rem;
+
+    border: 5px solid rgb(255, 255, 255);
+    padding: 0px;
+    border-radius: 10px;
+    transition: 1s ease-out;
+    opacity: 1;
+    background-color: rgb(199, 152, 219);
+    /* animation-delay: 2s; */
+
+}
+.container .scroller .image img:nth-child(1) {
+
+    transition: .4s ease-out;
+    animation: rud1 3s  infinite ease;
+
+}
+
+.container .scroller .image img:nth-child(3) {
+
+    transition: .4s ease-out;
+    animation: rud2 3s  infinite ease ;
+
+
+}
+@keyframes rud1{
+    0%{
+        transform: scale(1);
+
+    }
+    100%{
+        transform: scale(.7);
+
+    }
+}
+@keyframes rud2{
+    0%{
+        transform: scale(.7);
+
+    }
+    100%{
+        transform: scale(1);
+
+    }
+}
